@@ -3,18 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    max-width: 1920px;
 }
 
 body {
     background-image: url('https://i.imgur.com/cPCKJ8o.jpg');
       /* Set a specific height */
-  min-height: 100vh;
+    min-height: 100vh;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
@@ -201,6 +202,16 @@ header .header__about h1 {
     width: 400px;
     height: 600px;
     position: relative;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio__centered {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
 }
 
 .portfolio__card img {
@@ -210,18 +221,6 @@ header .header__about h1 {
     box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
     -webkit-box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
     -moz-box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
-}
-
-.portfolio__centered {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    color: #ffffff;
-    transition: all 0.5s ease-in-out;
 }
 
 .portfolio__centered > * {
@@ -242,7 +241,7 @@ header .header__about h1 {
 }
 
 .portfolio__card:hover img {
-    filter: blur(2px);
+    filter: blur(5px);
     transition: all 0.5s ease-in-out;
 }
 
