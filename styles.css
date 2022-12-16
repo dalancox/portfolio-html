@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    max-width: 1920px;
+    
 }
 
 body {
     background-image: url('https://i.imgur.com/cPCKJ8o.jpg');
       /* Set a specific height */
     min-height: 100vh;
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -21,6 +20,11 @@ body {
 main {
     background: rgb(255,255,255);
     background: linear-gradient(176deg, rgba(255,255,255,0.958420868347339) 22%, rgba(254,254,254,1) 81%);
+}
+
+section {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 h2 {
