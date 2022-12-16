@@ -5,6 +5,23 @@
     font-family: sans-serif;
 }
 
+body {
+    background-image: url('https://i.imgur.com/cPCKJ8o.jpg');
+      /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+    background: rgb(255,255,255);
+    background: linear-gradient(176deg, rgba(255,255,255,0.958420868347339) 22%, rgba(254,254,254,1) 81%);
+}
+
 h2 {
     font-size: 36px;
 }
@@ -121,7 +138,7 @@ header .header__about h1 {
     flex-direction: column;
     height: 50vh;
     align-items: center;
-    margin: 5rem;
+    padding: 5rem;
 }
 
 .services h2 {
@@ -165,7 +182,7 @@ header .header__about h1 {
 
 /* START Portfolio Section */
 .portfolio {
-    margin: 5rem;
+    padding: 5rem;
 }
 
 .portfolio h2 {
@@ -257,14 +274,12 @@ header .header__about h1 {
     flex-direction: column;
     height: 70vh;
     align-items: center;
-    margin: 5rem;
+    padding: 5rem;
 }
 
-.contact h2 {
+.contact__info-header {
     display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    margin-bottom: 3rem;
+    justify-content: center;
 }
 
 .contact__content {
@@ -373,7 +388,7 @@ footer {
     .portfolio,
     .contact {
         height: auto;
-        margin: 2rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .services__cards,

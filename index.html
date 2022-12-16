@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/88c1089dfd.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
     <title>Dalan Cox</title>
 </head>
 <body>
     <header>
-        <img src="https://i.imgur.com/cPCKJ8o.jpg" alt="Dalan Cox">
         <nav>
             <div class="header__logo">
                 Header
             </div>
             <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Services</li></a>
-                <a href="#"><li>Portfolio</li></a>
-                <a href="#"><li>Contact</li></a>
+                <li id="home">Home</li>
+                <li id="about-link"><a href="#about">About</a></li>
+                <li id="services-link"><a href="#services">Services</a></li>
+                <li id="portfolio-link"><a href="#portfolio">Portfolio</a></li>
+                <li id="contact-link"><a href="#contact">Contact</a></li>
             </ul>
             <div class="header__hamburger-menu">
                 <button>
@@ -34,7 +34,7 @@
         </div>
     </header>
     <main>
-        <section class="services">
+        <section class="services" id="services">
             <h2>Services</h2>
             <div class="services__cards">
                 <div>
@@ -51,17 +51,16 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__image">
                 <img src="https://i.imgur.com/swDxPjk.jpg" alt="dalan and alyssa">
             </div>
             <div class="about__content">
                 <h2>About</h2>
                 <p>Hello, my name is Dalan. I am a passionate and dedicated software developer with a love for creating functional and visually appealing websites. In my free time, I enjoy pushing myself physically and mentally by skateboarding and hiking in the beautiful outdoors with my supportive and adventurous wife Alyssa and our loyal and energetic dog by our side.</p>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio__container">
                 <div class="portfolio__card">
@@ -93,8 +92,7 @@
                 <button>Show More</button>
             </div>
         </section>
-        <section class="contact">
-            <h2>Contact Me</h2>
+        <section class="contact" id="contact" >
             <div class="contact__content">
                 <form action="#" method="POST">
                     <div class="form-control">
@@ -109,6 +107,9 @@
                     <button type="submit" class="btn">Submit</button>
                 </form>
                 <div class="contact__info">
+                    <div class="contact__info-header">
+                        <h2>Contact Me</h2>
+                    </div>
                     <div class="item">
                         <i class="fa-solid fa-location-dot"></i>
                         <p>Herriman, Utah</p>
