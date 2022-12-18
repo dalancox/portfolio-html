@@ -155,7 +155,7 @@ header .header__about h1 {
     gap: 1rem;
 }
 
-.services__cards div {
+.service__cards {
     width: 500px;
     height: 300px;
     display: flex;
@@ -163,15 +163,19 @@ header .header__about h1 {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: beige;
+    background-color: rgb(24, 24, 24);
+    border-radius: 10px; 
+    color: white;
+}
+
+.service__cards-border-gradient {
+    padding: 5px;
+    background: linear-gradient(45deg, red, blue);
     border-radius: 10px;
-    box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
-    -webkit-box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
-    -moz-box-shadow: 14px 9px 41px -22px rgba(0,0,0,0.84);
     transition: transform 0.25s ease-in-out;
 }
 
-.services__cards div:hover {
+.service__cards-border-gradient:hover {
     transform: translateY(-15px);
     background-color: white;
 }
@@ -399,7 +403,7 @@ footer {
         align-items: center;
     }
 
-    .services__cards div {
+    .service__cards {
         width: 100%;
         padding: 1rem;
     }
