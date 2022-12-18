@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('https://i.imgur.com/cPCKJ8o.jpg');
+    background-image: url('./dalan.PNG');
       /* Set a specific height */
     min-height: 100vh;
     /* Create the parallax scrolling effect */
@@ -141,7 +141,7 @@ header .header__about h1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 50vh;
+    height: auto;
     align-items: center;
     padding: 5rem;
 }
@@ -156,6 +156,7 @@ header .header__about h1 {
 .services__cards {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
 }
@@ -424,6 +425,10 @@ footer {
     .about {
         flex-direction: column;
         align-items: center;
+    }
+
+    .service__cards-border-gradient {
+        width: 100%;
     }
 
     .service__cards {
