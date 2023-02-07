@@ -4,8 +4,10 @@ const slidesContainer = document.getElementById("slides-container");
 const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-back");
 const nextButton = document.getElementById("slide-arrow-forward");
+const slideCounter =
+  document.getElementById("slides-container").childElementCount;
 
-let width = 0;
+let start = 0;
 
 anchorLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -18,20 +20,22 @@ anchorLinks.forEach((link) => {
 nextButton.addEventListener("click", (event) => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft += slideWidth;
-  width += slideWidth;
-  if (width > 1422) {
-    slidesContainer.scrollLeft -= width;
-    width = 0;
+  start++;
+
+  if (start == slideCounter) {
+    slidesContainer.scrollLeft -= 1896;
+    start = 0;
   }
 });
 
 prevButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft -= slideWidth;
-  console.log(width);
 
-  if (width === 0) {
-  } else {
-    width -= 474;
+  if (start > 0) {
+    start--;
+  } else if (start >= 0) {
+    slidesContainer.scrollLeft += 1896;
+    start = slideCounter - 1;
   }
 });
