@@ -453,6 +453,10 @@ footer {
     display: block;
   }
 
+  .header__hamburger-menu button i {
+    font-size: 35px;
+  }
+
   header .header__about {
     margin-left: 0;
     display: flex;
