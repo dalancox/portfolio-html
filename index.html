@@ -14,20 +14,31 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="header__logo">Header</div>
+      <nav class="desktop-nav">
         <ul>
-          <li id="home">Home</li>
           <li id="about-link"><a href="#about">About</a></li>
           <li id="services-link"><a href="#services">Services</a></li>
           <li id="portfolio-link"><a href="#portfolio">Portfolio</a></li>
           <li id="contact-link"><a href="#contact">Contact</a></li>
         </ul>
-        <div class="header__hamburger-menu">
-          <button>
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
+      </nav>
+      <nav class="mobile-nav">
+        <div id="hamburger-menu" class="header__hamburger-menu">
+            <button>
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="mobile-nav__drawer" id="mobile-drawer">
+            <button id="mobile-nav__btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+              <ul id="mobile-list">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
       </nav>
       <div class="header__about">
         <h1>Dalan Cox</h1>
@@ -104,7 +115,7 @@
                 for the Puras help center, contributing to its overall
                 functionality and user experience.
               </p>
-              <a href="#"
+              <a href="https://purahelpcentermain.gatsbyjs.io/?"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
               ></a>
             </div>
@@ -133,15 +144,15 @@
                 descriptions, and food choices. This allows users to easily
                 search and discover new dining options in their area.
               </p>
-              <a href=""
+              <a href="https://github.com/dalancox/ravenous"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
               ></a>
             </div>
           </div>
         </div>
-        <div class="portfolio__btn">
+        <!-- <div class="portfolio__btn">
           <button>Show More</button>
-        </div>
+        </div> -->
       </section>
       <section class="contact" id="contact">
         <div class="contact__content">
@@ -185,9 +196,9 @@
               </div>
               <hr />
               <div class="icon-items">
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-square-github"></i>
-                <i class="fa-brands fa-square-instagram"></i>
+                <a href="https://www.linkedin.com/in/dalancox/"><i class="fa-brands fa-linkedin"></i></a>
+                </i><a href="https://github.com/dalancox"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.instagram.com/dalancox/"><i class="fa-brands fa-square-instagram"></i></a>
               </div>
               <hr />
             </div>

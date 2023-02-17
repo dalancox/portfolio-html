@@ -39,3 +39,20 @@ prevButton.addEventListener("click", () => {
     start = slideCounter - 1;
   }
 });
+
+const mobileBtn = document.getElementById("mobile-nav__btn");
+const mobileDrawer = document.getElementById("mobile-drawer");
+const hamb = document.getElementById("hamburger-menu");
+const mobileList = document.getElementById("mobile-list");
+
+mobileBtn.addEventListener("click", () => {
+  mobileDrawer.classList.remove("active");
+});
+
+hamb.addEventListener("click", () => {
+  mobileDrawer.classList.add("active");
+});
+
+mobileList.addEventListener("click", () => {
+  mobileDrawer.classList.remove("active");
+});
