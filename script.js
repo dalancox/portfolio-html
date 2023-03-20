@@ -1,43 +1,24 @@
-//JavaScript to handle anchor link clicks
-const anchorLinks = document.querySelectorAll("a[href^='#']");
-const slidesContainer = document.getElementById("slides-container");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("slide-arrow-back");
-const nextButton = document.getElementById("slide-arrow-forward");
-const slideCounter =
-  document.getElementById("slides-container").childElementCount;
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "vertical",
+  loop: true,
 
-let start = 0;
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-anchorLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault(); // prevent the default anchor link behavior
-    const targetId = event.target.getAttribute("href");
-    document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
-  });
-});
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-nextButton.addEventListener("click", (event) => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
-  start++;
-
-  if (start == slideCounter) {
-    slidesContainer.scrollLeft -= 1896;
-    start = 0;
-  }
-});
-
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
-
-  if (start > 0) {
-    start--;
-  } else if (start >= 0) {
-    slidesContainer.scrollLeft += 1896;
-    start = slideCounter - 1;
-  }
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });
 
 const mobileBtn = document.getElementById("mobile-nav__btn");
@@ -50,6 +31,7 @@ mobileBtn.addEventListener("click", () => {
 });
 
 hamb.addEventListener("click", () => {
+  console.log("click");
   mobileDrawer.classList.add("active");
 });
 
