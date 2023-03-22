@@ -9,7 +9,13 @@
       src="https://kit.fontawesome.com/88c1089dfd.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>Dalan Cox</title>
   </head>
   <body>
@@ -80,16 +86,27 @@
       </section>
       <section class="about" id="about">
         <div class="about__image">
-          <div class="slide-wrapper">
-            <ul class="slides-container" id="slides-container">
-              <li class="slide"><img src="./assets/IMG-2595.jpg" alt="" /></li>
-              <li class="slide"><img src="./assets/IMG-3639.jpg" alt="" /></li>
-              <li class="slide"><img src="./assets/IMG-5979.jpg" alt="" /></li>
-              <li class="slide"><img src="./assets/IMG-5983.jpg" alt="" /></li>
-            </ul>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="./assets/IMG-2595.jpg" alt="" /></div>
+              <div class="swiper-slide"><img src="./assets/IMG-3639.jpg" alt="" /></div>
+              <div class="swiper-slide"><img src="./assets/IMG-5979.jpg" alt="" /></div>
+              <div class="swiper-slide"><img src="./assets/IMG-5983.jpg" alt="" /></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination-mobile">
+
+              <div class="swiper-pagination"></div>
+            </div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-buttons">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
-          <button class="slide-arrow" id="slide-arrow-back">&#8249;</button>
-          <button class="slide-arrow" id="slide-arrow-forward">&#8250;</button>
         </div>
         <div class="about__content">
           <h2>About</h2>
@@ -209,5 +226,7 @@
     <footer>
       <p>Website made by Dalan Cox | ❤️</p>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
